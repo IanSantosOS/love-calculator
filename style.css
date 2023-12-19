@@ -1,5 +1,5 @@
 :root {
-    --img-size: 7em;
+    --img-size: 7rem;
     --user-img-1: url(./img/user.jpg);
     --user-img-2: url(./img/user.jpg);
 }
@@ -30,12 +30,16 @@ footer {
     width: 100%;
     background-color: #990000;
 }
+
 header {
     text-align: center;
+    padding: .3em 0 .5em 0;
+    box-shadow: 2px 3px 20px 2px #550000;
 }
 
 footer {
     display: flex;
+    box-shadow: 2px -3px 20px 2px #550000;
 }
 
 .panel {
@@ -62,26 +66,19 @@ main {
 }
 
 .user {
-    cursor: pointer !important;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
 }
 
-.user-image-input {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
 .user-image {
+    position: relative;
     height: var(--img-size);
     width: var(--img-size);
     background-size: cover;
     border-radius: .7em;
-    margin: 0 2em 1em;
+    margin: 0 0 1em 0;
 }
 
 .user:nth-child(1) .user-image {
@@ -92,6 +89,29 @@ main {
     background-image: var(--user-img-2);
 }
 
+.user-image-input {
+    width: 100%;
+    height: calc(100% + 1.5em);
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: -1.5em;
+}
+
+.username {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #dddddd;
+    border-radius: 3em;
+    padding: .5em 1em;
+    font-weight: 600;
+    outline: none;
+}
+
+.username:focus {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
+}
+
 .love-btn {
     cursor: pointer;
     text-align: center;
@@ -99,7 +119,7 @@ main {
     width: 100%;
     font-size: 20px;
     font-weight: bolder;
-    padding: .15em 0 .5em;
+    padding: .15em 0 .5em 0;
     background-color: transparent;
     transition: .15s background-color ease-in-out;
 }
