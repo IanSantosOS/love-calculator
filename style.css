@@ -61,7 +61,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 1.5em 2em;
-    height: 100%;
+    min-height: 10.3em;
     flex: 1;
 }
 
@@ -110,6 +110,60 @@ main {
 
 .username:focus {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
+}
+
+.heart-container {
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: #550000;
+    border: .6em outset #880000;
+    border-radius: 1em;
+    min-height: 10.3em;
+    margin: 1.5rem;
+    padding: 0 .5em;
+}
+
+.counter {
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: .45em;
+}
+
+.heart {
+    position: relative;
+    mask-image: url(./img/heart.png);
+    mask-repeat: no-repeat;
+    mask-border: discrete;
+    mask-size: 8em;
+    height: 8em;
+    width: 8em;
+}
+
+.empty-block {
+    background-color: #770000;
+    width: 8em;
+    height: 8em;
+}
+
+.red-block {
+    background-color: #ee3333;
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    animation: .8s filling-heart alternate infinite;
+}
+
+@keyframes filling-heart {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 .love-btn {
