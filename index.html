@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <title>Love Counter</title>
+    <title>Love Calculator</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="panel">
         <header>
-            <h1>❤️ Love Counter ❤️</h1>
+            <h1>❤️ Love Calculator ❤️</h1>
         </header>
         <main>
             <div class="user">
                 <div class="user-image">
-                    <input id="user-img-inp-1" class="user-image-input" type="file" accept="image/png, image/jpeg">
+                    <input class="user-image-input" type="file" accept="image/png, image/jpeg">
                 </div>
-                <input id="username-1" type="text" class="username">
+                <input type="text" class="username">
             </div>
             <div class="heart-container">
-                <span id="love-percentage" class="counter">100%</span>
+                <span id="love-percentage" class="counter">0%</span>
                 <div class="heart">
                     <div class="empty-block"></div>
                     <div class="red-block"></div>
@@ -28,14 +28,14 @@
             </div>
             <div class="user">
                 <div class="user-image">
-                    <input id="user-img-inp-2" class="user-image-input" type="file" accept="image/png, image/jpeg">
+                    <input class="user-image-input" type="file" accept="image/png, image/jpeg">
                 </div>
-                <input id="username-2" type="text" class="username">
+                <input type="text" class="username">
             </div>
         </main>
         <footer>
-            <button class="love-btn">Clear</button>
-            <button class="love-btn">Retry</button>
+            <button id="clear-btn" class="love-btn">Clear</button>
+            <button id="main-btn" class="love-btn">Retry</button>
         </footer>
     </div>
     <script src="./script.js"></script>

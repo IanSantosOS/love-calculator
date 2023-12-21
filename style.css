@@ -1,7 +1,6 @@
 :root {
     --img-size: 7rem;
-    --user-img-1: url(./img/user.jpg);
-    --user-img-2: url(./img/user.jpg);
+    --user-img: url(./img/user.jpg);
 }
 
 * {
@@ -60,7 +59,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em 2em;
+    padding: .7em 2em;
     min-height: 10.3em;
     flex: 1;
 }
@@ -79,14 +78,8 @@ main {
     background-size: cover;
     border-radius: .7em;
     margin: 0 0 1em 0;
-}
-
-.user:nth-child(1) .user-image {
-    background-image: var(--user-img-1);
-}
-
-.user:nth-child(3) .user-image {
-    background-image: var(--user-img-2);
+    background-color: #d5aead;
+    background-image: var(--user-img);
 }
 
 .user-image-input {
@@ -99,33 +92,34 @@ main {
 }
 
 .username {
-    width: 100%;
     background-color: transparent;
-    border: 2px solid #dddddd;
+    border: 2px solid rgba(221, 221, 221, .5);
     border-radius: 3em;
-    padding: .5em 1em;
+    padding: .2em 1em;
     font-weight: 600;
     outline: none;
+    font-size: 1em;
+    text-align: center;
+    width: calc(var(--img-size) + 4em);
 }
 
 .username:focus {
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
+    border: 2px solid rgba(221, 221, 221, .8);
 }
 
 .heart-container {
     display: grid;
     place-items: center;
     position: relative;
+    border-radius: 1em;
+    margin: 1.5rem;
+    padding: .5em .7em;
     background-color: #550000;
     border: .6em outset #880000;
-    border-radius: 1em;
-    min-height: 10.3em;
-    margin: 1.5rem;
-    padding: 0 .5em;
 }
 
 .counter {
-    color: #ffffff;
+    color: #ededed;
     position: absolute;
     z-index: 1;
     font-size: 1.4em;
@@ -138,32 +132,22 @@ main {
     mask-image: url(./img/heart.png);
     mask-repeat: no-repeat;
     mask-border: discrete;
-    mask-size: 8em;
-    height: 8em;
-    width: 8em;
+    mask-size: 7em;
+    height: 7em;
+    width: 7em;
 }
 
 .empty-block {
     background-color: #770000;
-    width: 8em;
-    height: 8em;
+    height: 7em;
+    width: 7em;
 }
 
 .red-block {
     background-color: #ee3333;
     position: absolute;
-    width: 8em;
-    height: 8em;
-    animation: .8s filling-heart alternate infinite;
-}
-
-@keyframes filling-heart {
-    0% {
-        top: 100%;
-    }
-    100% {
-        top: 0;
-    }
+    height: 7em;
+    width: 7em;
 }
 
 .love-btn {
